@@ -117,7 +117,21 @@ img {
 }
 
 .people-card {
-  
+  margin-top: 20px;
+}
+
+.people-card:hover {
+  outline: 5px solid #63c6ae;
+  outline-offset: -5px;
+}
+
+.people-card:hover .people-cards-avatar img {
+  transform: translateY(-50%);
+}
+
+.people-card:hover .people-cards-tittle,
+.people-card:hover .people-cards-text {
+  color: #63c6ae;
 }
 
 .people-cards-image {
@@ -131,15 +145,16 @@ img {
   overflow: hidden;
 }
 
-.people-cards-content{
+.people-cards-content {
   text-align: center;
   padding: 40px 25px 10px;
-  border-left: 1px solid #DBE1E7;
+  border: 1px solid #dbe1e7;
 }
 
 .people-cards-tittle {
-  color: #737C85;
+  color: #737c85;
   font-size: 21px;
+  font-weight: normal;
 }
 
 .people-cards-text {
