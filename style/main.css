@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header {
+    background-color: #FFF;
+    width: 100%;
+}
+
+.logo-text {
+    text-transform: uppercase;
+    background: #63C6AE;
+    font-size: 24px;
+    margin: 0;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.header__nav {
+}
+
+.header__btnMenu {
+}
