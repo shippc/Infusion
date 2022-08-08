@@ -1,10 +1,18 @@
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
 }
 
 img {
   max-width: 100%;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
 .header {
@@ -102,4 +110,39 @@ img {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.people-cards {
+  margin-top: 2.5em;
+}
+
+.people-card {
+  
+}
+
+.people-cards-image {
+  width: 100%;
+}
+
+.people-cards-avatar {
+  margin: -55px auto;
+  width: 88px;
+  height: 88px;
+  overflow: hidden;
+}
+
+.people-cards-content{
+  text-align: center;
+  padding: 40px 25px 10px;
+  border-left: 1px solid #DBE1E7;
+}
+
+.people-cards-tittle {
+  color: #737C85;
+  font-size: 21px;
+}
+
+.people-cards-text {
+  color: #929da5;
+  font-size: 14px;
 }
