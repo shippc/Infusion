@@ -241,7 +241,7 @@ img {
   white-space: nowrap;
 }
 
-.slide-show figure{
+.slide-show figure {
   display: inline-block;
 }
 
@@ -252,22 +252,39 @@ img {
 }
 
 .quote-slide-show {
-  
 }
 
 .quote-slide-show h2 {
-  color: #FFF;
+  color: #fff;
   font-size: 30px;
   font-style: italic;
   font-weight: 400;
 }
 
 .quote-slide-show figcaption {
-  color: #FFF;
+  color: #fff;
   font-size: 18px;
   text-align: center;
 }
 
 .no-js .quote-slide-show figure + figure {
   margin-top: 5em;
+}
+
+.footer {
+  background-color: #242a2c;
+  padding: 50px 0 250px;
+  color: #454e51;
+  font-size: 14px;
+}
+
+.footer-links li {
+  list-style: none;
+}
+
+.footer-links a {
+  color: #454e51;
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
 }
