@@ -244,3 +244,30 @@ img {
 .slide-show figure{
   display: inline-block;
 }
+
+.quote-container {
+  background-color: #63c6ae;
+  padding: 50px 0;
+  border-bottom: 12px solid #48b9a1;
+}
+
+.quote-slide-show {
+  
+}
+
+.quote-slide-show h2 {
+  color: #FFF;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.quote-slide-show figcaption {
+  color: #FFF;
+  font-size: 18px;
+  text-align: center;
+}
+
+.no-js .quote-slide-show figure + figure {
+  margin-top: 5em;
+}
