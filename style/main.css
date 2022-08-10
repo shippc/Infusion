@@ -13,6 +13,7 @@ img {
   margin-left: auto;
   padding-right: 1em;
   padding-left: 1em;
+  max-width: 980px;
 }
 
 .header {
@@ -114,6 +115,7 @@ img {
 
 .people-cards {
   margin-top: 2.5em;
+  margin-bottom: 2.5em;
 }
 
 .people-card {
@@ -287,4 +289,39 @@ img {
   display: block;
   font-weight: 600;
   text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    position: fixed;
+  }
+  .logo-text {
+    width: 25%;
+    box-sizing: border-box;
+  }
+  .header-btn-menu {
+    display: none;
+  }
+  .header-nav {
+    float: left;
+    width: 75%;
+    clear: none;
+    max-width: 800px;
+  }
+  .header-nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .header-nav li {
+    border-bottom: none;
+    flex-grow: 1;
+  }
+  .header-nav a {
+    background-color: white;
+  }
+  .people-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
 }
