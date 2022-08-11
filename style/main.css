@@ -210,11 +210,9 @@ img{
 
 .people-cards{
   margin-top: 2.5em;
+  margin-bottom: 50px;
 }
 
-.people-cards__card{
-  
-}
 .people-cards__card:hover{
   outline: 5px solid #63c6ae;
   outline-offset: -5px;
@@ -240,7 +238,7 @@ img{
 .people-cards__content{
   text-align: center;
   padding: 40px 25px 10px;
-  border-left: 1px solid #dbe1e7;
+  border: 1px solid #dbe1e7;
 }
 .people-cards__title{
   color: #737c85;
