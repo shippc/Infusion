@@ -1,9 +1,7 @@
 function Menu(config) {
-    this.nav = (typeof config.container === 'string') ?
-        document.querySelector(config.container) : config.container
+    this.nav = (typeof config.container === 'string') ? document.querySelector(config.container) : config.container
 
-    this.btn = (typeof config.toggleBtn === 'string') ?
-        document.querySelector(config.toggleBtn) : config.toggleBtn
+    this.btn = (typeof config.toggleBtn === 'string') ? document.querySelector(config.toggleBtn) : config.toggleBtn
 
     this.maxWidth = config.widthEnabled || false;
 
@@ -18,12 +16,12 @@ function Menu(config) {
             if (window.innerWidth > _this.maxWidth) {
                 _this.nav.removeAttribute('style')
                 _opened = true;
-            } else if(!this.nav.getAttribute('style')){
-                closeMenu()
+            } else if (!this.nav.getAttribute('style')) {
+                closeMenu();
             }
         })
 
-        if(window.innerWidth <= _this.maxWidth){
+        if (window.innerWidth <= _this.maxWidth) {
             closeMenu();
         }
     }
@@ -37,13 +35,17 @@ function Menu(config) {
             closeMenu()
         }
     }
+
     function openMenu() {
         var _top = _this.nav.getBoundingClientRect().top + 'px'
+
         var _style = {
-            maxHeight: 'calc(100vh - ' + _top + ')',
+            maxHeight: 'calc(100vh - ' + _top + ' )',
             overflow: 'hidden'
         }
+
         applyStyleToNav(_style)
+
         _opened = true;
     }
 
@@ -58,7 +60,13 @@ function Menu(config) {
             maxHeight: '0px',
             overflow: 'hidden'
         }
+
         applyStyleToNav(_style)
+
         _opened = false;
     }
+
 }
+
+
+
