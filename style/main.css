@@ -21,6 +21,11 @@ img {
   width: 100%;
 }
 
+.js .header {
+  position: fixed;
+  width: 100%;
+}
+
 .logo-text {
   text-transform: uppercase;
   background: #63c6ae;
@@ -37,6 +42,10 @@ img {
 
 .header-nav {
   clear: left;
+}
+
+.js .header-nav {
+  transition: max-height 1s;
 }
 
 .header-nav ul {
@@ -67,6 +76,12 @@ img {
 }
 
 .header-btn-menu {
+  float: right;
+  margin: 1.5em;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .hero {
@@ -313,6 +328,7 @@ img {
     clear: none;
     max-width: 800px;
   }
+
   .header-nav ul {
     display: flex;
     justify-content: space-around;
