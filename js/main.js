@@ -1,26 +1,128 @@
 (function () {
-    var $body = document.querySelector('body');
-    $body.classList.remove('no-js')
-    $body.classList.add('js')
+    "use strict";
 
+    function initializeApplication() {
+        enableJavaScriptStyles();
+        initializeMenu();
+        initializeCarousels();
+        initializeDemonstrationForm();
+    }
 
-    var menu = new Menu({
-        container: '.header__nav',
-        toggleBtn: '.header__btnMenu',
-        widthEnabled: 1024
-    })
+    function enableJavaScriptStyles() {
+        document.body.classList.remove("no-js");
+        document.body.classList.add("js");
+    }
 
-    var carouselImgs = new Carousel({
-        container: '.laptop-slider .slideshow',
-        itens: 'figure',
-        btnPrev: '.prev',
-        btnNext: '.next'
-    })
+    function initializeMenu() {
+        const navigation = document.querySelector(".header__nav");
+        const menuButton = document.querySelector(".header__btnMenu");
 
-    var carouselQuotes = new Carousel({
-        container: '.quote-slideshow',
-        itens: 'figure',
-        btnPrev: '.prev',
-        btnNext: '.next'
-    })
-})()
+        if (
+            typeof Menu !== "function" ||
+            !navigation ||
+            !menuButton
+        ) {
+            return;
+        }
+
+        try {
+            new Menu({
+                container: navigation,
+                toggleBtn: menuButton,
+                widthEnabled: 1024
+            });
+        } catch (error) {
+            console.error("Não foi possível inicializar o menu:", error);
+        }
+    }
+
+    function initializeCarousels() {
+        if (typeof Carousel !== "function") {
+            console.error(
+                "O arquivo carousel.js não foi carregado corretamente."
+            );
+
+            return;
+        }
+
+        initializeInterfaceCarousel();
+        initializeTestimonialCarousel();
+    }
+
+    function initializeInterfaceCarousel() {
+        const container = document.querySelector(
+            ".laptop-slider .slideshow"
+        );
+
+        if (!container) {
+            return;
+        }
+
+        try {
+            new Carousel({
+                container,
+                items: "figure",
+                previousButton: ".prev",
+                nextButton: ".next",
+                autoplay: true,
+                interval: 4000
+            });
+        } catch (error) {
+            console.error(
+                "Não foi possível inicializar o carrossel de interfaces:",
+                error
+            );
+        }
+    }
+
+    function initializeTestimonialCarousel() {
+        const container = document.querySelector(
+            ".quote-slideshow"
+        );
+
+        if (!container) {
+            return;
+        }
+
+        try {
+            new Carousel({
+                container,
+                items: "figure",
+                previousButton: ".prev",
+                nextButton: ".next",
+                autoplay: true,
+                interval: 6000
+            });
+        } catch (error) {
+            console.error(
+                "Não foi possível inicializar o carrossel de depoimentos:",
+                error
+            );
+        }
+    }
+
+    function initializeDemonstrationForm() {
+        const form = document.querySelector(".contact-form");
+
+        if (!form) {
+            return;
+        }
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            console.info(
+                "Formulário demonstrativo: nenhuma mensagem foi enviada."
+            );
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener(
+            "DOMContentLoaded",
+            initializeApplication
+        );
+    } else {
+        initializeApplication();
+    }
+})();
